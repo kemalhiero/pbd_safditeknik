@@ -14,7 +14,11 @@ class CreateCostumerTable extends Migration
     public function up()
     {
         Schema::create('costumer', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_pelanggan');
+            $table->string('nama');
+            $table->string('no_hp');
+            $table->string('alamat');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

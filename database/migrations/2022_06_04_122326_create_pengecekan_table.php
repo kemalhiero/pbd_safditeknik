@@ -14,7 +14,13 @@ class CreatePengecekanTable extends Migration
     public function up()
     {
         Schema::create('pengecekan', function (Blueprint $table) {
-            $table->id();
+            $table->id('no_pengecekan');
+            $table->text('deskripsi_pengecekan');
+            $table->boolean('konfirmasi_pengecekan');
+            $table->date('tanggal');
+            $table->foreignId('id_teknisi');
+            $table->foreignId('no_struk');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -15,6 +15,10 @@ class CreateTransaksiBarangCostumerTable extends Migration
     {
         Schema::create('transaksi_barang_costumer', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('id_barang');
+            $table->foreignId('no_pengecekan');
+            $table->integer('jumlah');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
