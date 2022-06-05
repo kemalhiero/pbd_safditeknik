@@ -2,21 +2,29 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\TransaksiSparepart;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Sparepart extends Model
 {
-    use HasFactory;
-    protected $primaryKey = 'id_sparepart';
+    // use HasFactory;
+    use SoftDeletes;
+    protected $dates = [
+        'updated_at',
+        'created_at',
+        'deleted_at'
+    ];
+
     protected $fillable = [
         'nama_sparepart',
         'harga_sparepart',
     ];
 
-    // many to many
-    public function pengecekan()
+    //one to many
+    public function transaksi_sparepart()
     {
-        return $this->belongsToMany(Pengecekan::class, 'transaksi_sparepart', 'id_sparepart', 'no_pengecekan');
+        return $this->hasMany('TransaksiSparepart', 'id_sparepart');
     }
 }

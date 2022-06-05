@@ -2,13 +2,22 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Pengecekan;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Pembayaran extends Model
 {
-    use HasFactory;
-    protected $primaryKey = 'no_struk';
+    // use HasFactory;
+    use SoftDeletes;
+
+    protected $dates = [
+        'updated_at',
+        'created_at',
+        'deleted_at'
+    ];
+
     protected $fillable = [
         'deskripsi_perbaikan',
         'modal_kerja',
@@ -18,6 +27,6 @@ class Pembayaran extends Model
 
     public function pengecekan()
     {
-        return $this->hasOne(Pengecekan::class, 'no_struk');
+        return $this->hasOne('Pengecekan', 'no_struk');
     }
 }

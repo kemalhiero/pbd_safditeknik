@@ -2,26 +2,35 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Costumer;
+use App\Models\TransaksiBarangCostumer;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class BarangCostumer extends Model
 {
-    use HasFactory;
-    protected $primaryKey = 'id_barang';
+    // use HasFactory;
+    use SoftDeletes;
+    
+    protected $dates = [
+        'updated_at',
+        'created_at',
+        'deleted_at'
+    ];
+
     protected $fillable = [
         'nama_barang',
     ];
 
     // one to many
-    public function costumer()
+    public function transaksi_barang_customer()
     {
-        return $this->belongsTo(Costumer::class, 'id_pelanggan');
+        return $this->hasMany('TransaksiBarangCostumer', 'id_barang');
     }
 
-    // many to many
-    public function pengecekan()
+    public function customer()
     {
-        return $this->belongsToMany(Pengecekan::class, 'transaksi_barang_costumer', 'id_barang', 'no_pengecekan');
+        return $this->belongsTo('Costumer', 'id_pelanggan', 'id');
     }
 }

@@ -2,13 +2,21 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Pengecekan;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Teknisi extends Model
 {
-    use HasFactory;
-    protected $primaryKey = 'id_teknisi';
+    // use HasFactory;
+    use SoftDeletes;
+    protected $dates = [
+        'updated_at',
+        'created_at',
+        'deleted_at'
+    ];
+
     protected $fillable = [
         'nama',
         'alamat',
@@ -18,6 +26,6 @@ class Teknisi extends Model
     // one to many
     public function pengecekan()
     {
-        return $this->hasMany(Pengecekan::class, 'id_teknisi');
+        return $this->hasMany('Pengecekan', 'id_teknisi');
     }
 }
