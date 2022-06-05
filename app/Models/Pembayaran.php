@@ -15,4 +15,9 @@ class Pembayaran extends Model
         'pendapatan',
         'tanggal',
     ];
+
+    public function pengecekan()
+    {
+        return $this->hasOne(Pengecekan::class, 'no_struk');
+    }
 }

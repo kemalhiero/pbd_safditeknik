@@ -13,4 +13,10 @@ class Sparepart extends Model
         'nama_sparepart',
         'harga_sparepart',
     ];
+
+    // many to many
+    public function pengecekan()
+    {
+        return $this->belongsToMany(Pengecekan::class, 'transaksi_sparepart', 'id_sparepart', 'no_pengecekan');
+    }
 }

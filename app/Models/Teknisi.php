@@ -14,4 +14,10 @@ class Teknisi extends Model
         'alamat',
         'no_hp',
     ];
+
+    // one to many
+    public function pengecekan()
+    {
+        return $this->hasMany(Pengecekan::class, 'id_teknisi');
+    }
 }

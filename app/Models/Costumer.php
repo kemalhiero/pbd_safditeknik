@@ -14,4 +14,10 @@ class Costumer extends Model
         'no_hp',
         'alamat',
     ];
+
+    // one to many
+    public function barang_costumer()
+    {
+        return $this->hasMany(BarangCostumer::class, 'id_pelanggan');
+    }
 }
