@@ -14,7 +14,7 @@ class CreateTeknisiTable extends Migration
     public function up()
     {
         Schema::create('teknisi', function (Blueprint $table) {
-            $table->id('id_teknisi');
+            $table->id();
             $table->string('nama');
             $table->string('alamat');
             $table->string('no_hp');

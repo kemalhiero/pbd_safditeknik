@@ -15,8 +15,8 @@ class AddForeignKeyToTransaksiBarangCostumer extends Migration
     {
         Schema::table('transaksi_barang_costumer', function (Blueprint $table) {
             //
-            $table->foreign('id_barang', 'fk_transaksi_barang_costumer_to_barang_costumer')->references('id_barang')->on('barang_costumer')->onDelete('CASCADE')->onUpdate('CASCADE');
-            $table->foreign('no_pengecekan', 'fk_transaksi_barang_costumer_to_pengecekan')->references('no_pengecekan')->on('pengecekan')->onDelete('CASCADE')->onUpdate('CASCADE');
+            $table->foreign('no_pengecekan', 'fk_transaksi_barang_costumer_to_pengecekan')->references('id')->on('pengecekan')->onDelete('CASCADE')->onUpdate('CASCADE');
+            $table->foreign('id_barang', 'fk_transaksi_barang_costumer_to_barang_costumer')->references('id')->on('barang_costumer')->onDelete('CASCADE')->onUpdate('CASCADE');
         });
     }
 
@@ -28,7 +28,8 @@ class AddForeignKeyToTransaksiBarangCostumer extends Migration
     public function down()
     {
         Schema::table('transaksi_barang_costumer', function (Blueprint $table) {
-            //
+            $table->dropForeign('fk_transaksi_barang_costumer_to_pengecekan');
+            $table->dropForeign('fk_transaksi_barang_costumer_to_barang_costumer');
         });
     }
 }

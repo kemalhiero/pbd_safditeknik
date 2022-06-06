@@ -15,8 +15,8 @@ class AddForeignKeyToPengecekan extends Migration
     {
         Schema::table('pengecekan', function (Blueprint $table) {
             //
-            $table->foreign('id_teknisi', 'fk_pengecekan_to_teknisi')->references('id_teknisi')->on('teknisi')->onDelete('CASCADE')->onUpdate('CASCADE');
-            $table->foreign('no_struk', 'fk_pengecekan_to_pembayaran')->references('no_struk')->on('pembayaran')->onDelete('CASCADE')->onUpdate('CASCADE');
+            $table->foreign('id_teknisi', 'fk_pengecekan_to_teknisi')->references('id')->on('teknisi')->onDelete('CASCADE')->onUpdate('CASCADE');
+            $table->foreign('no_struk', 'fk_pengecekan_to_pembayaran')->references('id')->on('pembayaran')->onDelete('CASCADE')->onUpdate('CASCADE');
         });
     }
 
@@ -28,7 +28,8 @@ class AddForeignKeyToPengecekan extends Migration
     public function down()
     {
         Schema::table('pengecekan', function (Blueprint $table) {
-            //
+            $table->dropForeign('fk_pengecekan_to_teknisi');
+            $table->dropForeign('fk_pengecekan_to_pembayaran');
         });
     }
 }

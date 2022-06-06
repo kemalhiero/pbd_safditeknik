@@ -15,8 +15,8 @@ class AddForeignKeyToTransaksiSparepart extends Migration
     {
         Schema::table('transaksi_sparepart', function (Blueprint $table) {
             //
-            $table->foreign('id_sparepart', 'fk_transaksi_sparepart_to_sparepart')->references('id_sparepart')->on('sparepart')->onDelete('CASCADE')->onUpdate('CASCADE');
-            $table->foreign('no_pengecekan', 'fk_transaksi_sparepart_to_pengecekan')->references('no_pengecekan')->on('pengecekan')->onDelete('CASCADE')->onUpdate('CASCADE');
+            $table->foreign('no_pengecekan', 'fk_transaksi_sparepart_to_pengecekan')->references('id')->on('pengecekan')->onDelete('CASCADE')->onUpdate('CASCADE');
+            $table->foreign('id_sparepart', 'fk_transaksi_sparepart_to_sparepart')->references('id')->on('sparepart')->onDelete('CASCADE')->onUpdate('CASCADE');
         });
     }
 
@@ -28,7 +28,8 @@ class AddForeignKeyToTransaksiSparepart extends Migration
     public function down()
     {
         Schema::table('transaksi_sparepart', function (Blueprint $table) {
-            //
+            $table->dropForeign('fk_transaksi_sparepart_to_pengecekan');
+            $table->dropForeign('fk_transaksi_sparepart_to_sparepart');
         });
     }
 }

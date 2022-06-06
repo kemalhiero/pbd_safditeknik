@@ -15,7 +15,7 @@ class AddForeignKeyToBarangCostumer extends Migration
     {
         Schema::table('barang_costumer', function (Blueprint $table) {
             //
-            $table->foreign('id_pelanggan', 'fk_barang_costumer_to_costumer')->references('id_pelanggan')->on('costumer')->onDelete('CASCADE')->onUpdate('CASCADE');
+            $table->foreign('id_pelanggan', 'fk_barang_costumer_to_costumer')->references('id')->on('costumer')->onDelete('CASCADE')->onUpdate('CASCADE');
         });
     }
 
@@ -27,7 +27,7 @@ class AddForeignKeyToBarangCostumer extends Migration
     public function down()
     {
         Schema::table('barang_costumer', function (Blueprint $table) {
-            //
+            $table->dropForeign('fk_barang_costumer_to_costumer');
         });
     }
 }

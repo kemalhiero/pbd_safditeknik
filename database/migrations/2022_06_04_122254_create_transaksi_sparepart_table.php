@@ -15,8 +15,8 @@ class CreateTransaksiSparepartTable extends Migration
     {
         Schema::create('transaksi_sparepart', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_sparepart');
-            $table->foreignId('no_pengecekan');
+            $table->foreignId('id_sparepart')->index('fk_transaksi_sparepart_to_sparepart');
+            $table->foreignId('no_pengecekan')->index('fk_transaksi_sparepart_to_pengecekan');
             $table->integer('jumlah_sparepart');
             $table->softDeletes();
             $table->timestamps();

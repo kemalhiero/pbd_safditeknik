@@ -14,8 +14,8 @@ class CreateBarangCostumerTable extends Migration
     public function up()
     {
         Schema::create('barang_costumer', function (Blueprint $table) {
-            $table->id('id_barang');
-            $table->foreignId('id_pelanggan');
+            $table->id();
+            $table->foreignId('id_pelanggan')->index('fk_barang_costumer_to_costumer');
             $table->string('nama_barang');
             $table->softDeletes();
             $table->timestamps();

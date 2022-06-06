@@ -14,9 +14,9 @@ class CreateSparepartTable extends Migration
     public function up()
     {
         Schema::create('sparepart', function (Blueprint $table) {
-            $table->id('id_sparepart');
-            $table->string('nama_sparepart', 255);
-            $table->string('harga_sparepart', 100);
+            $table->id();
+            $table->string('nama_sparepart');
+            $table->integer('harga_sparepart');
             $table->softDeletes();
             $table->timestamps();
         });
