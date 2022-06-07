@@ -21,11 +21,12 @@ Route::get('/login', function () {
     return view('login');
 });
 
+// admin
 Route::get('/daftarkanpelanggan', function () {
     return view('daftarkanpelanggan');
 });
 
-Route::get('/daftarbarangpelanggan', function () {
+Route::get('/daftarbarangpelanggan', function () {  //pelanggan juga bisa
     return view('daftarbarangpelanggan');
 });
 
@@ -45,6 +46,17 @@ Route::get('/laporanpembayaran', function () {
     return view('laporanpembayaran');
 });
 
+// teknisi
 Route::get('/konfirmasideskripsibarang', function () {
     return view('konfirmasideskripsibarang');
 });
+
+Route::get('/teknisiperbaikanbarang', function () {
+    return view('teknisiperbaikanbarang');
+});
+
+// pelanggan
+Route::get('/pelangganperbaikanbarang', function () {
+    return view('pelangganperbaikanbarang');
+});
+
