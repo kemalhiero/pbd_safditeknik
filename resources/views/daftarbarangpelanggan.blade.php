@@ -10,25 +10,33 @@
 
               <!-- General Form Elements -->
               <form>
+              <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label">Nama Pelanggan</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" value="Read only / Disabled" disabled>
+                  </div>
+                </div>
+
                 <div class="row mb-3">
-                  <label for="inputText" class="col-sm-2 col-form-label">Text</label>
+                  <label for="inputText" class="col-sm-2 col-form-label">Nama Barang</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control">
                   </div>
                 </div>
-                <div class="row mb-3">
+                <!-- <div class="row mb-3">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Number</label>
                   <div class="col-sm-10">
                     <input type="number" class="form-control">
                   </div>
-                </div>
+                </div> -->
                 <div class="row mb-3">
-                  <label for="inputPassword" class="col-sm-2 col-form-label">Textarea</label>
+                  <label for="inputPassword" class="col-sm-2 col-form-label">Deskripsi Kerusakan</label>
                   <div class="col-sm-10">
                     <textarea class="form-control" style="height: 100px"></textarea>
                   </div>
                 </div>
-                <fieldset class="row mb-3">
+
+                <!-- <fieldset class="row mb-3">
                   <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
                   <div class="col-sm-10">
                     <div class="form-check">
@@ -71,14 +79,6 @@
 
                   </div>
                 </div>
-
-                <div class="row mb-3">
-                  <label class="col-sm-2 col-form-label">Disabled</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" value="Read only / Disabled" disabled>
-                  </div>
-                </div>
-
                 <div class="row mb-3">
                   <label class="col-sm-2 col-form-label">Select</label>
                   <div class="col-sm-10">
@@ -89,7 +89,7 @@
                       <option value="3">Three</option>
                     </select>
                   </div>
-                </div>
+                </div> -->
 
                 <br>
                 <div class="row mb-3">

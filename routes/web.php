@@ -26,6 +26,10 @@ Route::get('/daftarkanpelanggan', function () {
     return view('daftarkanpelanggan');
 });
 
+Route::get('/pelanggan', function () {
+    return view('pelanggan');
+});
+
 Route::get('/daftarbarangpelanggan', function () {  //pelanggan juga bisa
     return view('daftarbarangpelanggan');
 });
