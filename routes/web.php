@@ -30,8 +30,16 @@ Route::get('/pelanggan', function () {
     return view('pelanggan');
 });
 
+Route::get('/riwayat-transaksi', function () {
+    return view('riwayat-transaksi');
+});
+
 Route::get('/daftarbarangpelanggan', function () {  //pelanggan juga bisa
     return view('daftarbarangpelanggan');
+});
+
+Route::get('/pelangganbarang', function () {  //pelanggan juga bisa
+    return view('pelangganbarang');
 });
 
 Route::get('/datapembayaran', function () {

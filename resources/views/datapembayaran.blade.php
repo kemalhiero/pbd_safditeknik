@@ -19,19 +19,25 @@
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">No Struk</th>
-                    <th scope="col">Position</th>
-                    <th scope="col">Age</th>
-                    <th scope="col">Start Date</th>
+                    <th scope="col">Nama Barang</th>
+                    <th scope="col">Deskripsi Perbaikan</th>
+                    <th scope="col">Harga perbaikan</th>
+                    <th scope="col">Status</th>
                   </tr>
                 </thead>
                 <tbody>
                 <?php $no=1; ?>
                   <tr>
                     <th scope="row">{{$no++}}</th>
-                    <td>Brandon Jacob</td>
-                    <td>Designer</td>
-                    <td>28</td>
-                    <td>2016-05-25</td>
+                    <td>ST01</td>
+                    <td>Kipas Angin</td>
+                    <td>Perbaikan Spinner</td>
+                    <td>Rp50.000</td>
+                    <td>
+                    <span class="badge rounded-pill bg-success">Selesai</span>
+                    <span class="badge rounded-pill bg-secondary">Proses</span>
+                    <span class="badge rounded-pill bg-danger">Batal</span>
+                    </td>
                   </tr>
                 </tbody>
               </table>

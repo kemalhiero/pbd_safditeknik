@@ -153,26 +153,9 @@ input::-webkit-inner-spin-button {
             </li><!-- End Dashboard Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-person"></i><span>Pelanggan</span><i class="bi bi-chevron-down ms-auto"></i>
+                <a class="nav-link collapsed" href="/pelanggan">
+                <i class="bi bi-person"></i><span>Pelanggan</span><i class=""></i>
                 </a>
-                <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                <li>
-                    <a href="/daftarkanpelanggan">
-                    <i class="bi bi-circle"></i><span>Daftarkan Pelanggan</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/daftarbarangpelanggan">
-                    <i class="bi bi-circle"></i><span>Daftarkan Barang Pelanggan</span>
-                    </a>
-                </li>
-                <!-- <li>
-                    <a href="charts-echarts.html">
-                    <i class="bi bi-circle"></i><span>ECharts</span>
-                    </a>
-                </li> -->
-                </ul>
             </li><!-- End Pelanggan Nav -->
 
             <li class="nav-item">
