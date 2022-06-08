@@ -18,47 +18,62 @@
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Position</th>
-                    <th scope="col">Age</th>
-                    <th scope="col">Start Date</th>
+                    <th scope="col">No Struk</th>
+                    <th scope="col">Nama Barang</th>
+                    <th scope="col">Deskripsi Perbaikan</th>
+                    <th scope="col">Harga perbaikan</th>
+                    <th scope="col">Status</th>
                   </tr>
                 </thead>
                 <tbody>
+                <?php $no=1; ?>
                   <tr>
-                    <th scope="row">1</th>
-                    <td>Brandon Jacob</td>
-                    <td>Designer</td>
-                    <td>28</td>
-                    <td>2016-05-25</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Bridie Kessler</td>
-                    <td>Developer</td>
-                    <td>35</td>
-                    <td>2014-12-05</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Ashleigh Langosh</td>
-                    <td>Finance</td>
-                    <td>45</td>
-                    <td>2011-08-12</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">4</th>
-                    <td>Angus Grady</td>
-                    <td>HR</td>
-                    <td>34</td>
-                    <td>2012-06-11</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">5</th>
-                    <td>Raheem Lehner</td>
-                    <td>Dynamic Division Officer</td>
-                    <td>47</td>
-                    <td>2011-04-19</td>
+                    <th scope="row">{{$no++}}</th>
+                    <td>ST01</td>
+                    <td>Kipas Angin</td>
+                    <td>Perbaikan Spinner</td>
+                    <td>Rp50.000</td>
+                    <td>
+                    <span class="badge rounded-pill bg-success">Selesai</span>
+                    <!-- <span class="badge rounded-pill bg-secondary">Proses</span>
+                    <span class="badge rounded-pill bg-danger">Batal</span> -->
+                    
+
+                    <!-- Vertically centered Modal -->
+                      <button>
+                      <i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#verticalycentered"></i>
+                      </button>
+                      <div class="modal fade" id="verticalycentered" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                              <form action="" method="post">
+                              <div class="modal-header">
+                                <h5 class="modal-title">Ganti Status</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                              <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label">Pilih</label>
+                                <div class="col-sm-10">
+                                  <select class="form-select" aria-label="Default select example">
+                                    <option selected>Pilih Status</option>
+                                    <option value="selesai">Selesai</option>
+                                    <option value="proses">Sedang Proses</option>
+                                    <option value="batal">Batal</option>
+                                  </select>
+                                </div>
+                              </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                <button type="submit" class="btn btn-primary">Ganti</button>
+                              </div>
+                              </form>
+                            </div> 
+                          
+                        </div>
+                      </div><!-- End Vertically centered Modal-->
+                    </td>
                   </tr>
                 </tbody>
               </table>

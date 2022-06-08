@@ -23,6 +23,7 @@
                     <th scope="col">Deskripsi Perbaikan</th>
                     <th scope="col">Harga perbaikan</th>
                     <th scope="col">Status</th>
+                    <th scope="col">Struk</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -35,8 +36,39 @@
                     <td>Rp50.000</td>
                     <td>
                     <span class="badge rounded-pill bg-success">Selesai</span>
-                    <span class="badge rounded-pill bg-secondary">Proses</span>
-                    <span class="badge rounded-pill bg-danger">Batal</span>
+                    <!-- <span class="badge rounded-pill bg-secondary">Proses</span>
+                    <span class="badge rounded-pill bg-danger">Batal</span> -->
+                    </td>
+                    <td>
+                      <!-- Vertically centered Modal -->
+                      <button>
+                      <i class="bi bi-card-heading" data-bs-toggle="modal" data-bs-target="#verticalycentered"></i>
+                      </button>
+                      <div class="modal fade" id="verticalycentered" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                              <form action="" method="post">
+                              <div class="modal-header">
+                                <h5 class="modal-title">Struk</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="row mb-3">
+                                  <label for="inputText" class="col-sm-2 col-form-label">Text</label>
+                                  <div class="col-sm-10">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet assumenda blanditiis dignissimos quam ducimus sequi, adipisci iste illo sapiente!</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                <button type="submit" class="btn btn-primary">Cetak</button>
+                              </div>
+                              </form>
+                            </div> 
+                          
+                        </div>
+                      </div><!-- End Vertically centered Modal-->
                     </td>
                   </tr>
                 </tbody>

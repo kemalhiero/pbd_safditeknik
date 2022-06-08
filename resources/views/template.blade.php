@@ -174,8 +174,8 @@ input::-webkit-inner-spin-button {
                     </a>
                 </li>
                 <li>
-                    <a href="/datatransaksi">
-                    <i class="bi bi-circle"></i><span>Data Transaksi</span>
+                    <a href="/datapengecekan">
+                    <i class="bi bi-circle"></i><span>Data Pengecekan</span>
                     </a>
                 </li>
 

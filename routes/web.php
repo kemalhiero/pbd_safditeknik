@@ -42,7 +42,7 @@ Route::get('/pelangganbarang', function () {  //pelanggan juga bisa
     return view('pelangganbarang');
 });
 
-Route::get('/datapembayaran', function () {
+Route::get('/datapembayaran', function () {   //pelanggan juga bisa
     return view('datapembayaran');
 });
 
@@ -50,8 +50,8 @@ Route::get('/dataperbaikanbarang', function () {
     return view('dataperbaikanbarang');
 });
 
-Route::get('/datatransaksi', function () {
-    return view('datatransaksi');
+Route::get('/datapengecekan', function () {
+    return view('datapengecekan');
 });
 
 Route::get('/laporanpembayaran', function () {
