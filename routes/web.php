@@ -46,10 +46,6 @@ Route::get('/datapembayaran', function () {   //pelanggan juga bisa
     return view('datapembayaran');
 });
 
-Route::get('/dataperbaikanbarang', function () {
-    return view('dataperbaikanbarang');
-});
-
 Route::get('/datapengecekan', function () {
     return view('datapengecekan');
 });
@@ -63,8 +59,16 @@ Route::get('/konfirmasideskripsibarang', function () {
     return view('konfirmasideskripsibarang');
 });
 
-Route::get('/teknisiperbaikanbarang', function () {
-    return view('teknisiperbaikanbarang');
+Route::get('/teknisipengecekanbarang', function () {
+    return view('teknisipengecekanbarang');
+});
+
+Route::get('/teknisipembayaranbarang', function () {
+    return view('teknisipembayaranbarang');
+});
+
+Route::get('/formbayar', function () {
+    return view('formbayar');
 });
 
 // pelanggan

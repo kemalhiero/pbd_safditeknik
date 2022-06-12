@@ -21,6 +21,7 @@
                 <th scope="col">Barang</th>
                 <th scope="col">Pelanggan</th>
                 <th scope="col">Teknisi</th>
+                <th scope="col">Deskripsi</th>
                 <th scope="col">Tanggal</th>
                 <th scope="col">Status</th>
               </tr>
@@ -33,6 +34,7 @@
                 <td>Kipas Angin</td>
                 <td>Valen</td>
                 <td>adihtya</td>
+                <td></td>
                 <td>2022-05-25</td>
                 <td>
                   <!-- <span class="badge rounded-pill bg-success">Bisa Diperbaiki</span> -->
@@ -45,6 +47,7 @@
                 <td>Kompor</td>
                 <td>Palen</td>
                 <td>tya</td>
+                <td></td>
                 <td>2022-05-29</td>
                 <td>
                   <span class="badge rounded-pill bg-success">Bisa Diperbaiki</span>

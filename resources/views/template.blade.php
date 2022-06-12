@@ -145,6 +145,8 @@ input::-webkit-inner-spin-button {
 
         <ul class="sidebar-nav" id="sidebar-nav">
 
+            <li class="nav-heading">Admin</li>
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="/">
                 <i class="bi bi-grid"></i>
@@ -168,11 +170,11 @@ input::-webkit-inner-spin-button {
                     <i class="bi bi-circle"></i><span>Data Pembayaran</span>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="/dataperbaikanbarang">
                     <i class="bi bi-circle"></i><span>Data Perbaikan Barang</span>
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="/datapengecekan">
                     <i class="bi bi-circle"></i><span>Data Pengecekan</span>
@@ -190,6 +192,26 @@ input::-webkit-inner-spin-button {
                 </a>
             </li>
                 <!-- End pembayaran Page Nav -->
+
+            <li class="nav-heading">Teknisi</li>
+            
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/teknisipengecekanbarang">
+                <i class="bi bi-journal-text"></i>
+                <span>Pengecekan Barang</span>
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/teknisipembayaranbarang">
+                <i class="bi bi-gem"></i>
+                <span>Pembayaran</span>
+                </a>
+            </li>
+            
+            <li class="nav-heading">Costumer</li>
+
+            
 
         </ul>
 

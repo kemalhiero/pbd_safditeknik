@@ -36,8 +36,8 @@
                     <td>Rp50.000</td>
                     <td>
                     <span class="badge rounded-pill bg-success">Selesai</span>
-                    <!-- <span class="badge rounded-pill bg-secondary">Proses</span>
-                    <span class="badge rounded-pill bg-danger">Batal</span> -->
+                    <span class="badge rounded-pill bg-secondary">Proses</span>
+                    <span class="badge rounded-pill bg-danger">Batal</span>
                     </td>
                     <td>
                       <!-- Vertically centered Modal -->

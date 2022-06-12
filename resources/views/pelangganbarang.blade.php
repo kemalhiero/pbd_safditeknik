@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col-lg-12">
     <div> 
-      <a href="/daftarbarangpelanggan" type="button" class="btn btn-primary rounded-pill"> + Pelanggan</a>
+      <a href="/daftarbarangpelanggan" type="button" class="btn btn-primary rounded-pill"> + Barang</a>
     </div> <br>
       <div class="card">
           
