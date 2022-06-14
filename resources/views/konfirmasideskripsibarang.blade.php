@@ -41,7 +41,13 @@
           <legend class="col-form-label col-sm-2 pt-0">Konfirmasi</legend>
           <div class="col-sm-10">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" checked>
+              <label class="form-check-label" for="gridRadios3">
+                Belum di cek
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
               <label class="form-check-label" for="gridRadios1">
                 Bisa diperbaiki
               </label>
