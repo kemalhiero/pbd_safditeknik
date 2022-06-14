@@ -13,66 +13,86 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
 
-Route::get('/login', function () {
+Route::get('/', function () {
     return view('login');
 });
 
 // admin
-Route::get('/daftarkanpelanggan', function () {
-    return view('daftarkanpelanggan');
+Route::get('/admin', function () {
+    return view('admin/indexadmin');
 });
 
-Route::get('/pelanggan', function () {
-    return view('pelanggan');
+Route::get('/admin/daftarkanpelanggan', function () {
+    return view('admin/daftarkanpelanggan');
 });
 
-Route::get('/riwayat-transaksi', function () {
-    return view('riwayat-transaksi');
+Route::get('admin/pelanggan', function () {
+    return view('admin/pelanggan');
 });
 
-Route::get('/daftarbarangpelanggan', function () {  //pelanggan juga bisa
-    return view('daftarbarangpelanggan');
+Route::get('/admin/riwayat-transaksi', function () {
+    return view('admin/riwayat-transaksi');
 });
 
-Route::get('/pelangganbarang', function () {  //pelanggan juga bisa
-    return view('pelangganbarang');
+Route::get('/admin/daftarbarangpelanggan', function () {  //pelanggan juga bisa
+    return view('/admin/daftarbarangpelanggan');
 });
 
-Route::get('/datapembayaran', function () {   //pelanggan juga bisa
-    return view('datapembayaran');
+Route::get('/admin/pelangganbarang', function () {  //pelanggan juga bisa
+    return view('admin/pelangganbarang');
 });
 
-Route::get('/datapengecekan', function () {
-    return view('datapengecekan');
+Route::get('/admin/datapembayaran', function () {   //pelanggan juga bisa
+    return view('admin/datapembayaran');
 });
 
-Route::get('/laporanpembayaran', function () {
-    return view('laporanpembayaran');
+Route::get('/admin/datapengecekan', function () {
+    return view('admin/datapengecekan');
+});
+
+Route::get('/admin/laporanpembayaran', function () {
+    return view('admin/laporanpembayaran');
 });
 
 // teknisi
-Route::get('/konfirmasideskripsibarang', function () {
-    return view('konfirmasideskripsibarang');
+Route::get('/teknisi', function () {
+    return view('teknisi/indexteknisi');
 });
 
-Route::get('/teknisipengecekanbarang', function () {
-    return view('teknisipengecekanbarang');
+Route::get('/teknisi/konfirmasideskripsibarang', function () {
+    return view('teknisi/konfirmasideskripsibarang');
 });
 
-Route::get('/teknisipembayaranbarang', function () {
-    return view('teknisipembayaranbarang');
+Route::get('/teknisi/teknisipengecekanbarang', function () {
+    return view('teknisi/teknisipengecekanbarang');
 });
 
-Route::get('/formbayar', function () {
-    return view('formbayar');
+Route::get('/teknisi/teknisipembayaranbarang', function () {
+    return view('teknisi/teknisipembayaranbarang');
+});
+
+Route::get('/teknisi/formbayar', function () {
+    return view('teknisi/formbayar');
 });
 
 // pelanggan
-Route::get('/pelangganperbaikanbarang', function () {
-    return view('pelangganperbaikanbarang');
+Route::get('/pelanggan', function () {
+    return view('pelanggan/indexpelanggan');
 });
 
+Route::get('/pelanggan/pelangganperbaikanbarang', function () {
+    return view('pelanggan/pelangganperbaikanbarang');
+});
+
+Route::get('/pelanggan/daftarbarangpelanggan', function () {  //pelanggan juga bisa
+    return view('/pelanggan/daftarbarangpelanggan');
+});
+
+Route::get('/pelanggan/pelangganbarang', function () {  //pelanggan juga bisa
+    return view('pelanggan/pelangganbarang');
+});
+
+Route::get('/pelanggan/datapembayaran', function () {   //pelanggan juga bisa
+    return view('pelanggan/datapembayaran');
+});

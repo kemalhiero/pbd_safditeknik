@@ -1,4 +1,4 @@
-@extends('template')
+@extends('admin/templateadmin')
 
 @section('title', 'Data Pembayaran')
 

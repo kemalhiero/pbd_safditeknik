@@ -1,4 +1,4 @@
-@extends('template')
+@extends('pelanggan/templatepelanggan')
 
 @section('title', 'Perbaikan Barang')
 
@@ -12,7 +12,7 @@
               <!-- <h5 class="card-title">Data Pembayaran</h5> -->
                 <br>
                 <nav class="d-flex justify-content-end">
-                 <a href="/daftarbarangpelanggan" class="btn btn-primary rounded-pill">+ Daftarkan Barang</a><br><br>
+                 <a href="/pelanggan/daftarbarangpelanggan" class="btn btn-primary rounded-pill">+ Daftarkan Barang</a><br><br>
                 </nav>
                 <br>
               <!-- Table with stripped rows -->

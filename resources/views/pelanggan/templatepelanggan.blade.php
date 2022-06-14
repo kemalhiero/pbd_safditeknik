@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>@yield('title')</title>
+  <title>Pelanggan | @yield('title')</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -51,7 +51,7 @@ input::-webkit-inner-spin-button {
         <header id="header" class="header fixed-top d-flex align-items-center">
 
             <div class="d-flex align-items-center justify-content-between">
-            <a href="/" class="logo d-flex align-items-center">
+            <a href="/pelanggan" class="logo d-flex align-items-center">
                 <img src="assets/img/logo.png" alt="">
                 <span class="d-none d-lg-block">SafdiTeknik</span>
             </a>
@@ -145,72 +145,30 @@ input::-webkit-inner-spin-button {
 
         <ul class="sidebar-nav" id="sidebar-nav">
 
-            <li class="nav-heading">Admin</li>
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="/">
-                <i class="bi bi-grid"></i>
-                <span>Beranda</span>
-                </a>
-            </li><!-- End Dashboard Nav -->
+            
+            <li class="nav-heading">Pelanggan</li>
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="/pelanggan">
-                <i class="bi bi-person"></i><span>Pelanggan</span><i class=""></i>
-                </a>
-            </li><!-- End Pelanggan Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-menu-button-wide"></i><span>Kelola Data</span><i class="bi bi-chevron-down ms-auto"></i>
-                </a>
-                <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                <li>
-                    <a href="/datapembayaran">
-                    <i class="bi bi-circle"></i><span>Data Pembayaran</span>
-                    </a>
-                </li>
-                <!-- <li>
-                    <a href="/dataperbaikanbarang">
-                    <i class="bi bi-circle"></i><span>Data Perbaikan Barang</span>
-                    </a>
-                </li> -->
-                <li>
-                    <a href="/datapengecekan">
-                    <i class="bi bi-circle"></i><span>Data Pengecekan</span>
-                    </a>
-                </li>
-
-                </ul>
-            </li><!-- End kelola data Nav -->
-
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="/laporanpembayaran">
-                <i class="bi bi-card-list"></i>
-                <span>Laporan Pembayaran</span>
+                <i class="bi bi-grid"></i>
+                <span>Beranda</span>
                 </a>
             </li>
-                <!-- End pembayaran Page Nav -->
-
-            <li class="nav-heading">Teknisi</li>
             
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/teknisipengecekanbarang">
+                <a class="nav-link collapsed" href="/pelanggan/pelangganbarang">
+                    <i class="bi bi-card-list"></i>
+                    <span>Daftar Barang</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/pelanggan/pelangganperbaikanbarang">
                 <i class="bi bi-journal-text"></i>
                 <span>Pengecekan Barang</span>
                 </a>
             </li>
             
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="/teknisipembayaranbarang">
-                <i class="bi bi-gem"></i>
-                <span>Pembayaran</span>
-                </a>
-            </li>
-            
-            <li class="nav-heading">Costumer</li>
-
             
 
         </ul>

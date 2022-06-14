@@ -1,13 +1,13 @@
-@extends('template')
+@extends('teknisi/templateteknisi')
 
-@section('title', 'Form Pembayaran Barang')
+@section('title', 'Konfirmasi dan Deskripsi Perbaikan barang')
 
 @section('content')
 
   <div class="card">
     <div class="card-body">
       <br>
-      <p>Form Konfirmasi dan Pembayaran Barang</p>
+      <p>Form Konfirmasi dan Deskripsi Perbaikan barang</p>
       <br>
       <!-- General Form Elements -->
       <form>
@@ -37,39 +37,25 @@
           </div>
         </div>
 
-        <div class="row mb-3">
-          <label class="col-sm-2 col-form-label">Modal Kerja (Rp)</label>
-          <div class="col-sm-10">
-            <input type="number" class="form-control">
-          </div>
-        </div>
-
-        <div class="row mb-3">
-          <label class="col-sm-2 col-form-label">Pendapatan (Rp)</label>
-          <div class="col-sm-10">
-            <input type="number" class="form-control">
-          </div>
-        </div>
-
         <fieldset class="row mb-3">
-          <legend class="col-form-label col-sm-2 pt-0">Status</legend>
+          <legend class="col-form-label col-sm-2 pt-0">Konfirmasi</legend>
           <div class="col-sm-10">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" checked>
+              <label class="form-check-label" for="gridRadios3">
+                Belum di cek
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
               <label class="form-check-label" for="gridRadios1">
-                Sudah dibayar
+                Bisa diperbaiki
               </label>
             </div>
             <div class="form-check">
               <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
               <label class="form-check-label" for="gridRadios2">
-                Sedang proses
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-              <label class="form-check-label" for="gridRadios2">
-                Batal
+                Tidak bisa diperbaiki
               </label>
             </div>
           </div>

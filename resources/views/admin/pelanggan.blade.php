@@ -1,4 +1,4 @@
-@extends('template')
+@extends('admin/templateadmin')
 
 @section('title', 'Daftar Pelanggan')
 
@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col-lg-12">
     <div> 
-      <a href="/daftarkanpelanggan" type="button" class="btn btn-primary rounded-pill"> + Pelanggan</a>
+      <a href="/admin/daftarkanpelanggan" type="button" class="btn btn-primary rounded-pill"> + Pelanggan</a>
     </div> <br>
       <div class="card">
         <div class="card-body"><br>
@@ -35,9 +35,9 @@
                 <td>Gramed</td>
                 <td>
 
-                  <a href="/pelangganbarang" type="button" class="btn btn-dark rounded-pill">Barang</a>
+                  <a href="/admin/pelangganbarang" type="button" class="btn btn-dark rounded-pill">Barang</a>
                   
-                  <a href="/riwayat-transaksi" type="button" class="btn btn-primary rounded-pill">Riwayat Transaksi</a>
+                  <a href="/admin/riwayat-transaksi" type="button" class="btn btn-primary rounded-pill">Riwayat Transaksi</a>
 
                   <!-- <button type="button" class="btn btn-warning rounded-pill">Edit</button> -->
                                 <!-- Large Modal -->
@@ -73,7 +73,7 @@
                             </div>
                           </div>
                           <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                             <button type="submit" class="btn btn-primary">Submit</button>
                           </div>
                         </form>

@@ -1,33 +1,41 @@
-@extends('template')
+@extends('pelanggan/templatepelanggan')
 
-@section('title', 'Pendaftaran Pelanggan')
+@section('title', 'Pendaftaran Barang Pelanggan')
 
 @section('content')
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Form Pendaftaran Pelanggan</h5>
+              <h5 class="card-title">Form Pendaftaran Barang Pelanggan</h5>
 
               <!-- General Form Elements -->
               <form>
+              <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label">Nama Pelanggan</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" value="Read only / Disabled" disabled>
+                  </div>
+                </div>
+
                 <div class="row mb-3">
-                  <label for="inputText" class="col-sm-2 col-form-label">Nama</label>
+                  <label for="inputText" class="col-sm-2 col-form-label">Nama Barang</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control">
                   </div>
                 </div>
-                <div class="row mb-3">
-                  <label for="inputNumber" class="col-sm-2 col-form-label">No HP</label>
+                <!-- <div class="row mb-3">
+                  <label for="inputNumber" class="col-sm-2 col-form-label">Number</label>
                   <div class="col-sm-10">
                     <input type="number" class="form-control">
                   </div>
-                </div>
+                </div> -->
                 <div class="row mb-3">
-                  <label for="inputPassword" class="col-sm-2 col-form-label">Alamat</label>
+                  <label for="inputPassword" class="col-sm-2 col-form-label">Deskripsi Kerusakan</label>
                   <div class="col-sm-10">
                     <textarea class="form-control" style="height: 100px"></textarea>
                   </div>
                 </div>
+
                 <!-- <fieldset class="row mb-3">
                   <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
                   <div class="col-sm-10">
@@ -71,14 +79,6 @@
 
                   </div>
                 </div>
-
-                <div class="row mb-3">
-                  <label class="col-sm-2 col-form-label">Disabled</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" value="Read only / Disabled" disabled>
-                  </div>
-                </div>
-
                 <div class="row mb-3">
                   <label class="col-sm-2 col-form-label">Select</label>
                   <div class="col-sm-10">
@@ -91,10 +91,11 @@
                   </div>
                 </div> -->
 
+                <br>
                 <div class="row mb-3">
-                  <label class="col-sm-2 col-form-label">(☞ﾟヮﾟ)☞</label>
+                  <label class="col-sm-2 col-form-label"> (☞ﾟヮﾟ)☞</label>
                   <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">Submit Form</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
                 </div>
 
