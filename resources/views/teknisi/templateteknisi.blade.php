@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Teknisi | @yield('title')</title>
+  <title>@yield('title')</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -27,13 +27,13 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet"> --}}
 
-  <link rel="stylesheet" href={{ url("assets/vendor/bootstrap/css/bootstrap.min.css") }}>
-  <link rel="stylesheet" href={{ url("assets/vendor/bootstrap-icons/bootstrap-icons.css") }}>
-  <link rel="stylesheet" href={{ url("assets/vendor/boxicons/css/boxicons.min.css") }}>
-  <link rel="stylesheet" href={{ url("assets/vendor/quill/quill.snow.css") }}>
-  <link rel="stylesheet" href={{ url("assets/vendor/quill/quill.bubble.css") }}>
-  <link rel="stylesheet" href={{ url("assets/vendor/remixicon/remixicon.css") }}>
-  <link rel="stylesheet" href={{ url("assets/vendor/simple-datatables/style.css") }}>
+  <link rel="stylesheet" href={{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}>
+  <link rel="stylesheet" href={{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}>
+  <link rel="stylesheet" href={{ asset('assets/vendor/boxicons/css/boxicons.min.css') }}>
+  <link rel="stylesheet" href={{ asset('assets/vendor/quill/quill.snow.css') }}>
+  <link rel="stylesheet" href={{ asset('assets/vendor/quill/quill.bubble.css') }}>
+  <link rel="stylesheet" href={{ asset('assets/vendor/remixicon/remixicon.css') }}>
+  <link rel="stylesheet" href={{ asset('assets/vendor/simple-datatables/style.css') }}>
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -163,14 +163,14 @@ input::-webkit-inner-spin-button {
             </li>
             
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/teknisi/teknisipengecekanbarang">
+                <a class="nav-link collapsed" href="/teknisi-teknisipengecekanbarang">
                 <i class="bi bi-journal-text"></i>
                 <span>Pengecekan Barang</span>
                 </a>
             </li>
             
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/teknisi/teknisipembayaranbarang">
+                <a class="nav-link collapsed" href="/teknisi-teknisipembayaranbarang">
                 <i class="bi bi-gem"></i>
                 <span>Pembayaran</span>
                 </a>
@@ -217,14 +217,14 @@ input::-webkit-inner-spin-button {
 <script src="assets/vendor/tinymce/tinymce.min.js"></script>
 <script src="assets/vendor/php-email-form/validate.js"></script> --}}
 
-<script src={{ url("assets/vendor/apexcharts/apexcharts.min.js") }}></script>
-<script src={{ url("assets/vendor/bootstrap/js/bootstrap.bundle.min.js") }}></script>
-<script src={{ url("assets/vendor/chart.js/chart.min.js") }}></script>
-<script src={{ url("assets/vendor/echarts/echarts.min.js") }}></script>
-<script src={{ url("assets/vendor/quill/quill.min.js") }}></script>
-<script src={{ url("assets/vendor/simple-datatables/simple-datatables.js") }}></script>
-<script src={{ url("assets/vendor/tinymce/tinymce.min.js") }}></script>
-<script src={{ url("assets/vendor/php-email-form/validate.js") }}></script>
+<script src={{ asset('assets/vendor/apexcharts/apexcharts.min.js') }}></script>
+<script src={{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}></script>
+<script src={{ asset('assets/vendor/chart.js/chart.min.js') }}></script>
+<script src={{ asset('assets/vendor/echarts/echarts.min.js') }}></script>
+<script src={{ asset('assets/vendor/quill/quill.min.js') }}></script>
+<script src={{ asset('assets/vendor/simple-datatables/simple-datatables.js') }}></script>
+<script src={{ asset('assets/vendor/tinymce/tinymce.min.js') }}></script>
+<script src={{ asset('assets/vendor/php-email-form/validate.js') }}></script>
 
 
 

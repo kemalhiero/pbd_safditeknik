@@ -1,4 +1,4 @@
-@extends('pelanggan/templatepelanggan')
+@extends('pelanggan.templatepelanggan')
 
 @section('title', 'Pendaftaran Barang Pelanggan')
 

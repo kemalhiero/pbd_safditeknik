@@ -1,4 +1,4 @@
-@extends('teknisi/templateteknisi')
+@extends('teknisi.templateteknisi')
 
 @section('title', 'Pengecekan Barang')
 
@@ -35,13 +35,12 @@
                     <td>Perbaikan Spinner</td>
                     <!-- <td>Rp50.000</td> -->
                     <td>
-                    <span class="badge rounded-pill bg-success">Bisa Diperbaiki</span>
-                    <!-- <span class="badge rounded-pill bg-secondary">Proses</span>
-                    <span class="badge rounded-pill bg-danger">Tidak Bisa Diperbaiki</span> -->
-                    
+                      <span class="badge rounded-pill bg-success">Bisa Diperbaiki</span>
+                      <!-- <span class="badge rounded-pill bg-secondary">Proses</span>
+                      <span class="badge rounded-pill bg-danger">Tidak Bisa Diperbaiki</span> -->                    
                     </td>
                     <td>
-                    <a href="/teknisi/konfirmasideskripsibarang" class="btn btn-primary rounded-pill">Konfirmasi</a>
+                    <a href="/teknisi-konfirmasideskripsibarang" class="btn btn-primary rounded-pill">Konfirmasi</a>
                     </td>
                   </tr>
                 </tbody>

@@ -1,4 +1,4 @@
-@extends('teknisi/templateteknisi')
+@extends('teknisi.templateteknisi')
 
 @section('title', 'Beranda')
 

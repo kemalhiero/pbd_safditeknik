@@ -1,4 +1,4 @@
-@extends('pelanggan/templatepelanggan')
+@extends('admin.templateadmin')
 
 @section('title', 'Daftar Barang')
 
@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col-lg-12">
     <div> 
-      <a href="/pelanggan/daftarbarangpelanggan" type="button" class="btn btn-primary rounded-pill"> + Barang</a>
+      <a href="/admin-daftarbarangpelanggan" type="button" class="btn btn-primary rounded-pill"> + Barang</a>
     </div> <br>
       <div class="card">
           

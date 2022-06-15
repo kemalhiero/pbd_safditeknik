@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Admin | @yield('title')</title>
+  <title>@yield('title')</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -155,7 +155,7 @@ input::-webkit-inner-spin-button {
             </li><!-- End Dashboard Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/admin/pelanggan">
+                <a class="nav-link collapsed" href="/admin-pelanggan">
                 <i class="bi bi-person"></i><span>Pelanggan</span><i class=""></i>
                 </a>
             </li><!-- End Pelanggan Nav -->
@@ -166,7 +166,7 @@ input::-webkit-inner-spin-button {
                 </a>
                 <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="/admin/datapembayaran">
+                    <a href="/admin-datapembayaran">
                     <i class="bi bi-circle"></i><span>Data Pembayaran</span>
                     </a>
                 </li>
@@ -176,7 +176,7 @@ input::-webkit-inner-spin-button {
                     </a>
                 </li> -->
                 <li>
-                    <a href="/admin/datapengecekan">
+                    <a href="/admin-datapengecekan">
                     <i class="bi bi-circle"></i><span>Data Pengecekan</span>
                     </a>
                 </li>
@@ -186,7 +186,7 @@ input::-webkit-inner-spin-button {
 
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="admin/laporanpembayaran">
+                <a class="nav-link collapsed" href="admin-laporanpembayaran">
                 <i class="bi bi-card-list"></i>
                 <span>Laporan Pembayaran</span>
                 </a>

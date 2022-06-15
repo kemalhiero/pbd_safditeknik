@@ -1,4 +1,4 @@
-@extends('teknisi/templateteknisi')
+@extends('teknisi.templateteknisi')
 
 @section('title', 'Pembayaran Barang')
 
@@ -45,7 +45,7 @@
                     
                     </td>
                     <td>
-                    <a href="/teknisi/formbayar" class="btn btn-warning rounded-pill">Edit</a>
+                    <a href="/teknisi-formbayar" class="btn btn-warning rounded-pill">Edit</a>
                     </td>
                   </tr>
                 </tbody>

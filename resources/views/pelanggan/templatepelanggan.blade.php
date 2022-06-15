@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Pelanggan | @yield('title')</title>
+  <title>@yield('title')</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -156,14 +156,14 @@ input::-webkit-inner-spin-button {
             </li>
             
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/pelanggan/pelangganbarang">
+                <a class="nav-link collapsed" href="/pelanggan-pelangganbarang">
                     <i class="bi bi-card-list"></i>
                     <span>Daftar Barang</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/pelanggan/pelangganperbaikanbarang">
+                <a class="nav-link collapsed" href="/pelanggan-pelangganperbaikanbarang">
                 <i class="bi bi-journal-text"></i>
                 <span>Pengecekan Barang</span>
                 </a>
