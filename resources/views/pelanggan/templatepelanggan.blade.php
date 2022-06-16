@@ -156,7 +156,7 @@ input::-webkit-inner-spin-button {
             </li>
             
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/pelanggan-pelangganbarang">
+                <a class="nav-link collapsed" href="/pelanggan-daftarbarangpelanggan">
                     <i class="bi bi-card-list"></i>
                     <span>Daftar Barang</span>
                 </a>

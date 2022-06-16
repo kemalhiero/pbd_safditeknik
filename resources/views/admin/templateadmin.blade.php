@@ -165,11 +165,11 @@ input::-webkit-inner-spin-button {
                 <i class="bi bi-menu-button-wide"></i><span>Kelola Data</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
                 <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                <li>
+                <!-- <li>
                     <a href="/admin-datapembayaran">
                     <i class="bi bi-circle"></i><span>Data Pembayaran</span>
                     </a>
-                </li>
+                </li> -->
                 <!-- <li>
                     <a href="/dataperbaikanbarang">
                     <i class="bi bi-circle"></i><span>Data Perbaikan Barang</span>

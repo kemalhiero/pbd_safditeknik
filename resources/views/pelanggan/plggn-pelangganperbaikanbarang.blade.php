@@ -23,7 +23,7 @@
                     <th scope="col">#</th>
                     <th scope="col">Barang</th>
                     <th scope="col">Progres</th>
-                    <th scope="col">Biaya (Rp)</th>
+                    <!-- <th scope="col">Biaya (Rp)</th> -->
                     <th scope="col">Aksi</th>
                   </tr>
                 </thead>
@@ -36,7 +36,7 @@
                     <span class="badge rounded-pill bg-secondary">Sedang Proses</span>
                     <!-- <span class="badge rounded-pill bg-danger">Tidak Bisa Diperbaiki</span> -->
                     </td>
-                    <td>20.000</td>
+                    <!-- <td>20.000</td>   -->
                     <td>
                         <!-- Vertically centered Modal -->
                         <button type="button" class="btn btn-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#verticalycentered">
@@ -50,11 +50,11 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                Non omnis incidunt qui sed occaecati magni asperiores est mollitia. Soluta at et reprehenderit. Placeat autem numquam et fuga numquam. Tempora in facere consequatur sit dolor ipsum. Consequatur nemo amet incidunt est facilis. Dolorem neque recusandae quo sit molestias sint dignissimos.
+                                invoice pembayaran
                                 </div>
                                 <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <button type="button" class="btn btn-primary">Setuju</button>
                                 </div>
                             </div>
                             </div>

@@ -24,6 +24,7 @@
                     <th scope="col">Harga perbaikan</th>
                     <th scope="col">Status</th>
                     <th scope="col">Struk</th>
+                    <th scope="col">Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -36,8 +37,8 @@
                     <td>Rp50.000</td>
                     <td>
                     <span class="badge rounded-pill bg-success">Selesai</span>
-                    <span class="badge rounded-pill bg-secondary">Proses</span>
-                    <span class="badge rounded-pill bg-danger">Batal</span>
+                    <!-- <span class="badge rounded-pill bg-secondary">Proses</span>
+                    <span class="badge rounded-pill bg-danger">Batal</span> -->
                     </td>
                     <td>
                       <!-- Vertically centered Modal -->
@@ -69,6 +70,30 @@
                           
                         </div>
                       </div><!-- End Vertically centered Modal-->
+                    </td>
+                    <td>
+                        <!-- Vertically centered Modal -->
+                        <button type="button" class="btn btn-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#verticalycentered">
+                            Detail Pembayaran
+                        </button>
+                        <div class="modal fade" id="verticalycentered" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title">Input Data</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                invoice pembayaran
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Setuju</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- End Vertically centered Modal-->
                     </td>
                   </tr>
                 </tbody>
