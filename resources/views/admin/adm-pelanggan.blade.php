@@ -44,6 +44,9 @@
                   <button type="button" class="btn btn-warning rounded-pill" data-bs-toggle="modal" data-bs-target="#largeModal">
                     Edit
                   </button>
+                  <button type="button" class="btn btn-danger rounded-pill" data-bs-toggle="modal" data-bs-target="#largeModal">
+                    Delete
+                  </button>
                   <div class="modal fade" id="largeModal" tabindex="-1">
                     <div class="modal-dialog modal-lg">
                       <div class="modal-content">

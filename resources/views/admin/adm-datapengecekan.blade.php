@@ -56,14 +56,14 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="row mb-3">
-                                      <label for="inputPassword" class="col-sm-2 col-form-label">Deskripsi</label>
-                                      <div class="col-sm-10">
+                                      <label for="inputPassword" class="col-sm-3 col-form-label">Deskripsi</label>
+                                      <div class="col-sm-9">
                                         <textarea class="form-control" style="height: 100px"></textarea>
                                       </div>
                                     </div>
                                     <div class="row mb-3">
-                                      <label for="inputText" class="col-sm-2 col-form-label">Harga</label>
-                                      <div class="col-sm-10">
+                                      <label for="inputText" class="col-sm-3 col-form-label">Harga</label>
+                                      <div class="col-sm-9">
                                         <input type="number" class="form-control">
                                       </div>
                                     </div>
