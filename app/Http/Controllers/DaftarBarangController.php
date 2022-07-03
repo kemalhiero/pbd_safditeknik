@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Teknisi;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class TeknisiController extends Controller
+class DaftarBarangController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class TeknisiController extends Controller
      */
     public function index()
     {
-        //
+        return view('pelanggan.plggn-indexpelanggan');
     }
 
     /**
@@ -41,10 +41,10 @@ class TeknisiController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Teknisi  $teknisi
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Teknisi $teknisi)
+    public function show($id)
     {
         //
     }
@@ -52,10 +52,10 @@ class TeknisiController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Teknisi  $teknisi
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Teknisi $teknisi)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +64,10 @@ class TeknisiController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Teknisi  $teknisi
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Teknisi $teknisi)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +75,10 @@ class TeknisiController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Teknisi  $teknisi
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Teknisi $teknisi)
+    public function destroy($id)
     {
         //
     }

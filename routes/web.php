@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DaftarBarangController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::middleware('guest')->group(function() {
+    Route::get('/login', [LoginController::class, 'create'])->name('login.create');
+    // Route::post('/login', [LoginController::class, 'store'])->name('login.store');
+});
 
-Route::get('/', function () {
-    return view('auth.login');
-})->name('login.create');
+// Route::get('/', function () {
+//     return view('auth.login');
+// })->name('login.create');
 
 // admin
 Route::get('/admin', function () {
@@ -77,9 +83,8 @@ Route::get('/teknisi-formbayar', function () {
 });
 
 // pelanggan
-Route::get('/pelanggan', function () {
-    return view('pelanggan.plggn-indexpelanggan');
-});
+Route::resource('/pelanggan', DaftarBarangController::class);
+
 
 Route::get('/pelanggan-pelangganperbaikanbarang', function () {
     return view('pelanggan.plggn-pelangganperbaikanbarang');

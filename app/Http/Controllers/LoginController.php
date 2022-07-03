@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\TransaksiSparepart;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class TransaksiSparepartController extends Controller
+class LoginController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class TransaksiSparepartController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -24,7 +24,7 @@ class TransaksiSparepartController extends Controller
      */
     public function create()
     {
-        //
+        return view('auth.login');
     }
 
     /**
@@ -41,10 +41,10 @@ class TransaksiSparepartController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\TransaksiSparepart  $transaksiSparepart
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(TransaksiSparepart $transaksiSparepart)
+    public function show($id)
     {
         //
     }
@@ -52,10 +52,10 @@ class TransaksiSparepartController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\TransaksiSparepart  $transaksiSparepart
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(TransaksiSparepart $transaksiSparepart)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +64,10 @@ class TransaksiSparepartController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\TransaksiSparepart  $transaksiSparepart
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TransaksiSparepart $transaksiSparepart)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +75,10 @@ class TransaksiSparepartController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\TransaksiSparepart  $transaksiSparepart
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TransaksiSparepart $transaksiSparepart)
+    public function destroy($id)
     {
         //
     }
