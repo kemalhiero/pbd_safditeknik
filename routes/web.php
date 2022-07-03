@@ -23,9 +23,16 @@ Route::middleware('guest')->group(function() {
     Route::post('/register', [RegisterationController::class, 'store'])->name('register.store');
 });
 
+Route::middleware('auth')->group(function() {
+    Route::post('logout', LogoutController::class)->name('logout.invoke');
+    
+    // Pelanggan
+    Route::resource('/pelanggan', DaftarBarangController::class);
+    Route::get('/pelanggan-check', [DaftarBarangController::class, 'check'])->name('pelanggan.check');
+});
+
 // pelanggan
-Route::resource('/pelanggan', DaftarBarangController::class);
-Route::get('/pelanggan-check', [DaftarBarangController::class, 'check'])->name('pelanggan.check');
+
 
 
 // Route::get('/pelanggan-pelangganperbaikanbarang', function () {
