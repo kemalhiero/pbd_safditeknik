@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('login');
-});
+    return view('auth.login');
+})->name('login.create');
 
 // admin
 Route::get('/admin', function () {
