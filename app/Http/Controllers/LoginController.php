@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use App\Providers\RouteServiceProvider;
+use Illuminate\Validation\ValidationException;
 
 class LoginController extends Controller
 {
@@ -35,7 +38,19 @@ class LoginController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required']
+        ]);
+        dd($user);
+        // if (Auth::attempt($user)) {
+        //     // if(role)
+        //     return redirect('/pelanggan');
+        // }
+        // throw ValidationException::withMessages([
+        //     'email' => 'Email Salah',
+        //     'password' => 'Password Salah'
+        // ]);
     }
 
     /**

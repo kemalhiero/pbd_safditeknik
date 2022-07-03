@@ -55,36 +55,38 @@
                                         <h5 class="card-title text-center pb-0 fs-4">Create an Account</h5>
                                     </div>
 
-                                    <form class="row g-3 needs-validation" novalidate>
-                                        <div class="col-12">
-                                            <label for="yourName" class="form-label">Your Name</label>
-                                            <input type="text" name="name" class="form-control" id="yourName"
-                                                required>
-                                            <div class="invalid-feedback">Please, enter your name!</div>
+                                    <form action="{{ route('register.store') }}" method="post">
+                                        @csrf
+                                        <div class="mb-4">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input class="form-control me-2"
+                                                value="{{ old('email') }}" name="email" type="email">
+                                            @error('email')
+                                                <span class="invalid-feedback">
+                                                    {{ $message }}
+                                                </span>
+                                            @enderror
                                         </div>
-
-                                        <div class="col-12">
-                                            <label for="yourEmail" class="form-label">Your Email</label>
-                                            <input type="email" name="email" class="form-control" id="yourEmail"
-                                                required>
-                                            <div class="invalid-feedback">Please enter a valid Email adddress!</div>
+                                        <div class="mb-4">
+                                            <label for="name" class="form-label">name</label>
+                                            <input type="text" value="{{ old('name') }}" name="name" id="name"
+                                                class="form-control">
+                                            @error('name')
+                                                <div class="text-danger mt-2 invalid-feedback">{{ $message }}</div>
+                                            @enderror
                                         </div>
-
-                                        <div class="col-12">
-                                            <label for="yourPassword" class="form-label">Password</label>
-                                            <input type="password" name="password" class="form-control"
-                                                id="yourPassword" required>
-                                            <div class="invalid-feedback">Please enter your password!</div>
+                                        <div class="mb-4">
+                                            <label for="password" class="form-label">password</label>
+                                            <input type="password" value="{{ old('password') }}" name="password"
+                                                id="password" class="form-control">
+                                            @error('password')
+                                                <div class="text-danger mt-2 invalid-feedback">{{ $message }}</div>
+                                            @enderror
                                         </div>
-
-                                        <div class="col-12">
-                                            <button class="btn btn-primary w-100" type="submit">Create Account</button>
+                                        <div class="mb-4">
+                                            <label for="">Role</label>
                                         </div>
-
-                                        <div class="col-12">
-                                            <p class="small mb-0">Already have an account? <a
-                                                    href="pages-login.html">Log in</a></p>
-                                        </div>
+                                        <button type="submit" class="btn btn-primary">Register</button>
                                     </form>
 
                                 </div>

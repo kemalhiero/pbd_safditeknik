@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\RegisterationRequest;
 
 class RegisterationController extends Controller
 {
@@ -37,9 +39,10 @@ class RegisterationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(RegisterationRequest $request)
     {
-        //
+        User::create($request->all());
+        return redirect('/login');
     }
 
     /**
