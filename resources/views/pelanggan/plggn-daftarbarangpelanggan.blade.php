@@ -8,6 +8,7 @@
         <div class="card-body">
             <h5 class="card-title">Form Pendaftaran Barang Pelanggan</h5>
             <form>
+                @csrf
                 <div class="row mb-3">
                     <label class="col-sm-2 col-form-label">Nama Pelanggan</label>
                     <div class="col-sm-10">
@@ -17,7 +18,7 @@
                 <div class="row mb-3">
                     <label for="inputText" class="col-sm-2 col-form-label">Nama Barang</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control">
+                        <input name="nama_barang" type="text" class="form-control">
                     </div>
                 </div>
                 <div class="row mb-3">

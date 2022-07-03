@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\PelangganRequest;
+use App\Models\BarangCostumer;
 use Illuminate\Http\Request;
 
 class DaftarBarangController extends Controller
@@ -33,9 +35,12 @@ class DaftarBarangController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PelangganRequest $request)
     {
-        //
+        BarangCostumer::create([
+            'nama_barang' => $request->list
+        ]);
+        return redirect('/pelanggan/create');
     }
 
     /**
