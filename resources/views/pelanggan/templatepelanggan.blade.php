@@ -77,8 +77,8 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6>Kevin Anderson</h6>
-                            <span>Admin</span>
+                            <h6>{{ Auth::user()->name ?? 'Nama'}}</h6>
+                            <span>{{ Auth::user()->role ?? 'Pelanggan' }}</span>
                         </li>
                         <li>
                             <hr class="dropdown-divider">
