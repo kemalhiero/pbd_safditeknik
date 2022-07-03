@@ -60,7 +60,7 @@
                     <div class="col-12">
                         <label for="validationCustomUsername" class="form-label">Username</label>
                         <div class="input-group has-validation">
-                          <input value="{{ old('email') }}" type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                          <input name="email" value="{{ old('email') }}" type="text" class="form-control @error('email') is-invalid @enderror" id="validationCustomUsername" aria-describedby="inputGroupPrepend">
                             @error('email')
                                 <span class="invalid-feedback">
                                     {{ $message }}
@@ -71,7 +71,7 @@
 
                     <div class="col-12">
                       <label for="yourPassword" class="form-label">Password</label>
-                      <input type="password" name="password" class="form-control" id="yourPassword" required>
+                      <input type="password" name="password" class="form-control  @error('password') is-invalid @enderror" id="yourPassword">
                         @error('email')
                             <span class="invalid-feedback">
                                 {{ $message }}

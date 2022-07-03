@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 use App\Providers\RouteServiceProvider;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
 
 class LoginController extends Controller
@@ -38,19 +39,13 @@ class LoginController extends Controller
      */
     public function store(Request $request)
     {
-        $user = $request->validate([
-            'email' => ['required', 'email'],
-            'password' => ['required']
+        $user = $request->only('email', 'password');
+        if(Auth::attempt($user)) {
+            return redirect(RouteServiceProvider::PELANGGAN);
+        };
+        throw ValidationException::withMessages([
+            'email' => 'Email Salah'
         ]);
-        dd($user);
-        // if (Auth::attempt($user)) {
-        //     // if(role)
-        //     return redirect('/pelanggan');
-        // }
-        // throw ValidationException::withMessages([
-        //     'email' => 'Email Salah',
-        //     'password' => 'Password Salah'
-        // ]);
     }
 
     /**
