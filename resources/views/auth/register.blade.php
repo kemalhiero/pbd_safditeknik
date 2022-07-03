@@ -85,6 +85,12 @@
                                         </div>
                                         <div class="mb-4">
                                             <label for="">Role</label>
+                                            <select class="form-select" name="role" aria-label="Default select example">
+                                                <option selected >Pilih Role</option>
+                                                <option value="admin">Admin</option>
+                                                <option value="pelanggan">Pelanggan</option>
+                                                <option value="teknisi">teknisi</option>
+                                              </select>
                                         </div>
                                         <button type="submit" class="btn btn-primary">Register</button>
                                     </form>

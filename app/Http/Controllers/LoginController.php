@@ -39,7 +39,7 @@ class LoginController extends Controller
      */
     public function store(Request $request)
     {
-        $user = $request->only('email', 'password');
+        $user = $request->only('email', 'password', 'role');
         if(Auth::attempt($user)) {
             return redirect(RouteServiceProvider::PELANGGAN);
         };
