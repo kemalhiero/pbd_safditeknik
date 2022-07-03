@@ -23,14 +23,11 @@ Route::middleware('guest')->group(function() {
 
 // pelanggan
 Route::resource('/pelanggan', DaftarBarangController::class);
+Route::get('/pelanggan-check', [DaftarBarangController::class, 'check'])->name('pelanggan.check');
 
 
 // Route::get('/pelanggan-pelangganperbaikanbarang', function () {
 //     return view('pelanggan.plggn-pelangganperbaikanbarang');
-// });
-
-// Route::get('/pelanggan-daftarbarangpelanggan', function () {  //pelanggan juga bisa
-//     return view('pelanggan.plggn-daftarbarangpelanggan');
 // });
 
 // Route::get('/pelanggan-pelangganbarang', function () {  //pelanggan juga bisa

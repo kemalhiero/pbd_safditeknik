@@ -143,7 +143,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/pelanggan-pelangganperbaikanbarang">
+                <a class="nav-link collapsed" href="{{ route('pelanggan.check') }}">
                     <i class="bi bi-journal-text"></i>
                     <span>Pengecekan Barang</span>
                 </a>

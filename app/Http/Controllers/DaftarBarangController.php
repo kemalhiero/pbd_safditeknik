@@ -51,7 +51,7 @@ class DaftarBarangController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -86,5 +86,11 @@ class DaftarBarangController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    // Custom
+    public function check()
+    {
+        return view('pelanggan.plggn-daftarbarangpelanggan');
     }
 }
