@@ -63,7 +63,7 @@
 
                 @guest
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="">Register</a>
+                    <a class="nav-link" aria-current="page" href="{{ route('register.create') }}">Register</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="{{ route('login.create') }}">Login</a>
