@@ -24,7 +24,7 @@ class DaftarBarangController extends Controller
      */
     public function create()
     {
-        //
+        return view('pelanggan.plggn-daftarbarangpelanggan');
     }
 
     /**
