@@ -104,10 +104,10 @@
                             <hr class="dropdown-divider">
                         </li>
                         <li>
-                            <a class="dropdown-item d-flex align-items-center" href="#">
-                                <i class="bi bi-box-arrow-right"></i>
-                                <span>Sign Out</span>
-                            </a>
+                            <form action="{{ route('logout.invoke') }}" method="post">
+                                @csrf
+                                <button type="submit" class="btn btn-danger">Logout</button>
+                            </form>
                         </li>
 
                     </ul><!-- End Profile Dropdown Items -->
