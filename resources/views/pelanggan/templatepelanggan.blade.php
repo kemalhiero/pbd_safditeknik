@@ -72,7 +72,7 @@
                 <li class="nav-item dropdown pe-3">
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#"
                         data-bs-toggle="dropdown">
-                        <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+                        <img src="/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
                         <span class="d-none d-md-block dropdown-toggle ps-2">{{ Auth::user()->name ?? 'Nama' }}</span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
@@ -103,10 +103,12 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li>
+                        <li class="p-3">
                             <form action="{{ route('logout.invoke') }}" method="post">
                                 @csrf
-                                <button type="submit" class="btn btn-danger">Logout</button>
+                                <button type="submit"><i class="bi bi-box-arrow-right"></i>
+                                    <span>Sign Out</span>
+                                </button>
                             </form>
                         </li>
 

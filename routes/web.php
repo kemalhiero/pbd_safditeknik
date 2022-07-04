@@ -28,8 +28,15 @@ Route::middleware('auth')->group(function() {
     Route::post('logout', LogoutController::class)->name('logout.invoke');
 
     // Pelanggan
-    Route::resource('/pelanggan', DaftarBarangController::class);
-    Route::get('/pelanggan-check', [DaftarBarangController::class, 'check'])->name('pelanggan.check');
+    Route::prefix('/pelanggan')->group(function() {
+        Route::get('/', [DaftarBarangController::class, 'index']);
+        Route::get('/create', [DaftarBarangController::class, 'create'])->name('pelanggan.create');
+        Route::get('/check', [DaftarBarangController::class, 'check'])->name('pelanggan.check');
+    });
+
+    // Teknisi
+
+    // Admin
 });
 
 // pelanggan
