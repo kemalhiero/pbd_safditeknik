@@ -16,7 +16,8 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
+        DB::table('users')->insert(
+            [
 
             'name' => 'teknisi',
 
@@ -24,6 +25,31 @@ class UserSeeder extends Seeder
 
             'password' => Hash::make('teknisi'),
 
-         ]);
+            'role' => 'teknisi'
+
+            ],
+            [
+
+            'name' => 'pelanggan',
+
+            'email' => 'pelanggan@example.com',
+
+            'password' => Hash::make('pelanggan'),
+
+            'role' => 'pelanggan'
+
+            ],
+            [
+
+            'name' => 'admin',
+
+            'email' => 'admin@example.com',
+
+            'password' => Hash::make('admin'),
+
+            'role' => 'admin'
+
+            ]
+        );
     }
 }
