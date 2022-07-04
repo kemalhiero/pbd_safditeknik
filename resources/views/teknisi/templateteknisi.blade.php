@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="/assets/img/favicon.png" rel="icon">
+    <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -20,24 +20,16 @@
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    {{-- <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
-  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet"> --}}
-
-    <link rel="stylesheet" href={{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}>
-    <link rel="stylesheet" href={{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}>
-    <link rel="stylesheet" href={{ asset('assets/vendor/boxicons/css/boxicons.min.css') }}>
-    <link rel="stylesheet" href={{ asset('assets/vendor/quill/quill.snow.css') }}>
-    <link rel="stylesheet" href={{ asset('assets/vendor/quill/quill.bubble.css') }}>
-    <link rel="stylesheet" href={{ asset('assets/vendor/remixicon/remixicon.css') }}>
-    <link rel="stylesheet" href={{ asset('assets/vendor/simple-datatables/style.css') }}>
+    <link rel="stylesheet" href={{ asset('/assets/vendor/bootstrap/css/bootstrap.min.css') }}>
+    <link rel="stylesheet" href={{ asset('/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}>
+    <link rel="stylesheet" href={{ asset('/assets/vendor/boxicons/css/boxicons.min.css') }}>
+    <link rel="stylesheet" href={{ asset('/assets/vendor/quill/quill.snow.css') }}>
+    <link rel="stylesheet" href={{ asset('/assets/vendor/quill/quill.bubble.css') }}>
+    <link rel="stylesheet" href={{ asset('/assets/vendor/remixicon/remixicon.css') }}>
+    <link rel="stylesheet" href={{ asset('/assets/vendor/simple-datatables/style.css') }}>
 
     <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
 
     <!-- =======================================================
   * Template Name: NiceAdmin - v2.2.2
@@ -60,7 +52,7 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
 
         <div class="d-flex align-items-center justify-content-between">
-            <a href="/teknisi" class="logo d-flex align-items-center">
+            <a href="{{ route('teknisi.index') }}" class="logo d-flex align-items-center">
                 <img src="assets/img/logo.png" alt="">
                 <span class="d-none d-lg-block">SafdiTeknik</span>
             </a>
@@ -144,21 +136,21 @@
             <li class="nav-heading">Teknisi</li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/teknisi">
+                <a class="{{ request()->is('teknisi') ? 'nav-link' : 'nav-link collapsed' }}" href="{{ route('teknisi.index') }}">
                     <i class="bi bi-grid"></i>
                     <span>Beranda</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/teknisi-teknisipengecekanbarang">
+                <a class="{{ request()->is('teknisi/check') || request()->is('teknisi/konfirmasi') ? 'nav-link' : 'nav-link collapsed' }}" href="{{ route('teknisi.check') }}">
                     <i class="bi bi-journal-text"></i>
                     <span>Pengecekan Barang</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/teknisi-teknisipembayaranbarang">
+                <a class="{{ request()->is('teknisi/pembayaran') || request()->is('teknisi/checkout') ? 'nav-link' : 'nav-link collapsed' }}" href="{{ route('teknisi.pembayaran') }}">
                     <i class="bi bi-gem"></i>
                     <span>Pembayaran</span>
                 </a>
@@ -196,19 +188,19 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
-    <script src={{ asset('assets/vendor/apexcharts/apexcharts.min.js') }}></script>
-    <script src={{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}></script>
-    <script src={{ asset('assets/vendor/chart.js/chart.min.js') }}></script>
-    <script src={{ asset('assets/vendor/echarts/echarts.min.js') }}></script>
-    <script src={{ asset('assets/vendor/quill/quill.min.js') }}></script>
-    <script src={{ asset('assets/vendor/simple-datatables/simple-datatables.js') }}></script>
-    <script src={{ asset('assets/vendor/tinymce/tinymce.min.js') }}></script>
-    <script src={{ asset('assets/vendor/php-email-form/validate.js') }}></script>
+    <script src={{ asset('/assets/vendor/apexcharts/apexcharts.min.js') }}></script>
+    <script src={{ asset('/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}></script>
+    <script src={{ asset('/assets/vendor/chart.js/chart.min.js') }}></script>
+    <script src={{ asset('/assets/vendor/echarts/echarts.min.js') }}></script>
+    <script src={{ asset('/assets/vendor/quill/quill.min.js') }}></script>
+    <script src={{ asset('/assets/vendor/simple-datatables/simple-datatables.js') }}></script>
+    <script src={{ asset('/assets/vendor/tinymce/tinymce.min.js') }}></script>
+    <script src={{ asset('/assets/vendor/php-email-form/validate.js') }}></script>
 
 
 
     <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <script src="/assets/js/main.js"></script>
 
 </body>
 

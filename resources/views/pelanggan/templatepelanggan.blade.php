@@ -45,7 +45,7 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
 
         <div class="d-flex align-items-center justify-content-between">
-            <a href="/pelanggan" class="logo d-flex align-items-center">
+            <a href="{{ route('pelanggan.index') }}" class="logo d-flex align-items-center">
                 <img src="assets/img/logo.png" alt="">
                 <span class="d-none d-lg-block">SafdiTeknik</span>
             </a>
@@ -131,7 +131,7 @@
             <li class="nav-heading">Pelanggan</li>
 
             <li class="nav-item">
-                <a class="{{ request()->is('pelanggan') ? 'nav-link' : 'nav-link collapsed' }}" href="/pelanggan">
+                <a class="{{ request()->is('pelanggan') ? 'nav-link' : 'nav-link collapsed' }}" href="{{ route('pelanggan.index') }}">
                     <i class="bi bi-grid"></i>
                     <span>Beranda</span>
                 </a>

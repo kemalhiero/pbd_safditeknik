@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\DaftarBarangController;
 use App\Http\Controllers\RegisterationController;
+use App\Http\Controllers\TeknisiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,29 +18,40 @@ use App\Http\Controllers\RegisterationController;
 |
 */
 
-Route::middleware('guest')->group(function() {
+Route::middleware('guest')->group(function () {
     Route::get('/login', [LoginController::class, 'create'])->name('login.create');
     Route::post('/login', [LoginController::class, 'store'])->name('login.store');
     Route::get('/register', [RegisterationController::class, 'create'])->name('register.create');
     Route::post('/register', [RegisterationController::class, 'store'])->name('register.store');
 });
 
-Route::middleware('auth')->group(function() {
+Route::middleware('auth')->group(function () {
     Route::post('logout', LogoutController::class)->name('logout.invoke');
 
     // Pelanggan
-    Route::prefix('/pelanggan')->group(function() {
-        Route::get('/', [DaftarBarangController::class, 'index']);
+    Route::prefix('/pelanggan')->group(function () {
+        Route::get('/', [DaftarBarangController::class, 'index'])->name('pelanggan.index');
         Route::get('/create', [DaftarBarangController::class, 'create'])->name('pelanggan.create');
         Route::get('/check', [DaftarBarangController::class, 'check'])->name('pelanggan.check');
     });
 
-    // Teknisi
-    Route::prefix('/teknisi')->group(function() {
-        Route::get('/', );
-    });
+
 
     // Admin
+});
+
+// Teknisi
+Route::prefix('/teknisi')->group(function () {
+    Route::get('/', [TeknisiController::class, 'index'])->name('teknisi.index');
+    Route::get('/check', [TeknisiController::class, 'check'])->name('teknisi.check');
+    Route::get('/konfirmasi', [TeknisiController::class, 'konfirmasi'])->name('teknisi.konfirmasi');
+    Route::get('/pembayaran', [TeknisiController::class, 'pembayaran'])->name('teknisi.pembayaran');
+    Route::get('/checkout', [TeknisiController::class, 'checkOut'])->name('teknisi.checkout');
+});
+
+
+Route::get('/teknisi-formbayar', function () {
+
 });
 
 // pelanggan
@@ -97,24 +109,3 @@ Route::middleware('auth')->group(function() {
 // });
 
 // teknisi
-Route::get('/teknisi', function () {
-    return view('teknisi.tkns-indexteknisi');
-});
-
-Route::get('/teknisi-konfirmasideskripsibarang', function () {
-    return view('teknisi.tkns-konfirmasideskripsibarang');
-});
-
-Route::get('/teknisi-teknisipengecekanbarang', function () {
-    return view('teknisi.tkns-teknisipengecekanbarang');
-});
-
-Route::get('/teknisi-teknisipembayaranbarang', function () {
-    return view('teknisi.tkns-teknisipembayaranbarang');
-});
-
-Route::get('/teknisi-formbayar', function () {
-    return view('teknisi.tkns-formbayar');
-});
-
-

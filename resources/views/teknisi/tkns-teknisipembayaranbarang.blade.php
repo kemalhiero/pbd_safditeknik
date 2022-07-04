@@ -42,10 +42,10 @@
                         <!-- <span class="badge rounded-pill bg-success">Sudah Dibayar</span> -->
                         <span class="badge rounded-pill bg-secondary">Proses</span>
                         <!-- <span class="badge rounded-pill bg-danger">Batal</span> -->
-                    
+
                     </td>
                     <td>
-                    <a href="/teknisi-formbayar" class="btn btn-warning rounded-pill">Edit</a>
+                    <a href="{{ route('teknisi.checkout') }}" class="btn btn-warning rounded-pill">Edit</a>
                     </td>
                   </tr>
                 </tbody>
