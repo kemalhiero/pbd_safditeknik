@@ -69,26 +69,36 @@
 
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
+
                 <li class="nav-item d-block d-lg-none">
                     <a class="nav-link nav-icon search-bar-toggle " href="#">
                         <i class="bi bi-search"></i>
                     </a>
                 </li>
 
+                @guest
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{{ route('register.create') }}">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{{ route('login.create') }}">Login</a>
+                </li>
+                @else
                 <li class="nav-item dropdown pe-3">
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#"
                         data-bs-toggle="dropdown">
-                        <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-                        <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+                        <img src="/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+                        <span class="d-none d-md-block dropdown-toggle ps-2">{{ Auth::user()->name ?? 'Nama' }}</span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6>Kevin Anderson</h6>
-                            <span>Admin</span>
+                            <h6>{{ Auth::user()->name ?? 'Nama'}}</h6>
+                            <span>{{ Auth::user()->role ?? 'Teknisi' }}</span>
                         </li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
+
                         <li>
                             <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
                                 <i class="bi bi-person"></i>
@@ -108,16 +118,22 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="#">
-                                <i class="bi bi-box-arrow-right"></i>
-                                <span>Sign Out</span>
-                            </a>
+                        <li class="p-3">
+                            <form action="{{ route('logout.invoke') }}" method="post">
+                                @csrf
+                                <button type="submit"><i class="bi bi-box-arrow-right"></i>
+                                    <span>Sign Out</span>
+                                </button>
+                            </form>
                         </li>
-                    </ul>
-                </li>
+
+                    </ul><!-- End Profile Dropdown Items -->
+                </li><!-- End Profile Nav -->
+                @endguest
+
             </ul>
-        </nav>
+        </nav><!-- End Icons Navigation -->
+
     </header>
 
     <!-- ======= Sidebar ======= -->

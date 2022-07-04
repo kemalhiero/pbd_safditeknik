@@ -83,7 +83,7 @@
                       <button class="btn btn-primary w-100" type="submit">Login</button>
                     </div>
                   </form>
-
+                  <div class="mt-3">Belum Punya akun? <a href="{{ route('register.create') }}">Daftar</a> Disini!</div>
                 </div>
               </div>
 

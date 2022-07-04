@@ -35,6 +35,9 @@ Route::middleware('auth')->group(function() {
     });
 
     // Teknisi
+    Route::prefix('/teknisi')->group(function() {
+        Route::get('/', );
+    });
 
     // Admin
 });
@@ -93,25 +96,25 @@ Route::middleware('auth')->group(function() {
 //     return view('admin.adm-laporanpembayaran');
 // });
 
-// // teknisi
-// Route::get('/teknisi', function () {
-//     return view('teknisi.tkns-indexteknisi');
-// });
+// teknisi
+Route::get('/teknisi', function () {
+    return view('teknisi.tkns-indexteknisi');
+});
 
-// Route::get('/teknisi-konfirmasideskripsibarang', function () {
-//     return view('teknisi.tkns-konfirmasideskripsibarang');
-// });
+Route::get('/teknisi-konfirmasideskripsibarang', function () {
+    return view('teknisi.tkns-konfirmasideskripsibarang');
+});
 
-// Route::get('/teknisi-teknisipengecekanbarang', function () {
-//     return view('teknisi.tkns-teknisipengecekanbarang');
-// });
+Route::get('/teknisi-teknisipengecekanbarang', function () {
+    return view('teknisi.tkns-teknisipengecekanbarang');
+});
 
-// Route::get('/teknisi-teknisipembayaranbarang', function () {
-//     return view('teknisi.tkns-teknisipembayaranbarang');
-// });
+Route::get('/teknisi-teknisipembayaranbarang', function () {
+    return view('teknisi.tkns-teknisipembayaranbarang');
+});
 
-// Route::get('/teknisi-formbayar', function () {
-//     return view('teknisi.tkns-formbayar');
-// });
+Route::get('/teknisi-formbayar', function () {
+    return view('teknisi.tkns-formbayar');
+});
 
 
