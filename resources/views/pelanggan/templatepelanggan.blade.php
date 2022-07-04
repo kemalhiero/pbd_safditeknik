@@ -131,21 +131,21 @@
             <li class="nav-heading">Pelanggan</li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/pelanggan">
+                <a class="{{ request()->is('pelanggan') ? 'nav-link' : 'nav-link collapsed' }}" href="/pelanggan">
                     <i class="bi bi-grid"></i>
                     <span>Beranda</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ route('pelanggan.create') }}">
+                <a class="{{ request()->is('pelanggan/create') ? 'nav-link' : 'nav-link collapsed' }}" href="{{ route('pelanggan.create') }}">
                     <i class="bi bi-card-list"></i>
                     <span>Daftar Barang</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ route('pelanggan.check') }}">
+                <a class="{{ request()->is('pelanggan/check') ? 'nav-link' : 'nav-link collapsed' }}" href="{{ route('pelanggan.check') }}">
                     <i class="bi bi-journal-text"></i>
                     <span>Pengecekan Barang</span>
                 </a>
