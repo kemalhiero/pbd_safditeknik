@@ -41,12 +41,6 @@ Route::middleware('auth')->group(function() {
 
 // pelanggan
 
-
-
-// Route::get('/pelanggan-pelangganperbaikanbarang', function () {
-//     return view('pelanggan.plggn-pelangganperbaikanbarang');
-// });
-
 // Route::get('/pelanggan-pelangganbarang', function () {  //pelanggan juga bisa
 //     return view('pelanggan.plggn-pelangganbarang');
 // });

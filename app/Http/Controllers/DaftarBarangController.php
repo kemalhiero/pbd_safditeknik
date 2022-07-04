@@ -91,6 +91,6 @@ class DaftarBarangController extends Controller
     // Custom
     public function check()
     {
-        return view('pelanggan.plggn-daftarbarangpelanggan');
+        return view('pelanggan.plggn-pelangganperbaikanbarang');
     }
 }
