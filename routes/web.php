@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\DaftarBarangController;
 use App\Http\Controllers\RegisterationController;
 
@@ -25,7 +26,7 @@ Route::middleware('guest')->group(function() {
 
 Route::middleware('auth')->group(function() {
     Route::post('logout', LogoutController::class)->name('logout.invoke');
-    
+
     // Pelanggan
     Route::resource('/pelanggan', DaftarBarangController::class);
     Route::get('/pelanggan-check', [DaftarBarangController::class, 'check'])->name('pelanggan.check');
