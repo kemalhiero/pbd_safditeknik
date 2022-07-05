@@ -27,3 +27,12 @@ Fungsional
     Sama dengan daftar barang ditambah halaman dashboard/beranda
     - Customer dapat melihat progres perbaikan barang
     - Customer dapat melihat detail pembayaran (nama, quantity<jumlah transaksi_sparepart, sparepart>, harga, mirip sama nota belanja )
+    
+    
+    -- ADMIN --
+    1. Admin Mendaftarkan Pelanggan
+    2. Admin Mendaftarkan Barang
+    3. Admin
+    
+    -- Teknisi --
+    1. Teknisi Dapat Mengupdate Status Perbaikan Barang
