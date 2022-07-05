@@ -7,5 +7,5 @@
     2. Admin Mendaftarkan Barang
     3. Admin
     
-    -- Teknisi --
-    1. Teknisi Dapat Mengupdate Status Perbaikan Barang
+   -- Teknisi --
+   1. Teknisi Dapat Mengupdate Status Perbaikan Barang
