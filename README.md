@@ -2,6 +2,7 @@
 
 - Tabel Relasi
 <img src="tabelrelasi.jpeg">
+.
     -- ADMIN --
     1. Admin Mendaftarkan Pelanggan
     2. Admin Mendaftarkan Barang
